@@ -1,0 +1,14 @@
+﻿<Window x:Class="ClipToBoundsIssueRepro.Views.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:ClipToBoundsIssueRepro.Views"
+        WindowState="Normal" WindowStartupLocation="CenterScreen"
+        UseLayoutRounding="True" RenderOptions.BitmapInterpolationMode="HighQuality"
+        Foreground="{DynamicResource ThemeForegroundBrush}"
+        Title="ClipToBoundsIssueRepro" Height="690" Width="1320"
+        mc:Ignorable="d"
+        d:DesignWidth="1000" d:DesignHeight="700">
+    <local:MainView/>
+</Window>

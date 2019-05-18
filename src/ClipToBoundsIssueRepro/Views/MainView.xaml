@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="ClipToBoundsIssueRepro.Views.MainView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ClipToBoundsIssueRepro.Views"
+             xmlns:controls="clr-namespace:ClipToBoundsIssueRepro.Controls"
+             UseLayoutRounding="True" RenderOptions.BitmapInterpolationMode="HighQuality"
+             Focusable="True"
+             mc:Ignorable="d"
+             d:DesignWidth="800" d:DesignHeight="600">
+    <Grid RowDefinitions="Auto,*">
+        <StackPanel  Grid.Row="1">
+            <CheckBox Content="DrawDirtyRects" IsChecked="{Binding $parent[local:MainView].DrawDirtyRects}" Click="DebugDrawDirtyRects_Click"/>
+            <CheckBox Content="DrawFps" IsChecked="{Binding $parent[local:MainView].DrawFps}" Click="DebugDrawFps_Click"/>
+            <CheckBox Content="CustomDraw" IsChecked="{Binding #zoomControl.CustomDraw, Mode=TwoWay}"/>
+        </StackPanel>
+        <Border Grid.Row="1" Width="500" Height="500">
+            <Border ClipToBounds="True" Background="Transparent" Focusable="True">
+                <controls:ZoomControl x:Name="zoomControl" Background="Transparent" ClipToBounds="False"/>
+            </Border>
+        </Border>
+    </Grid>
+</UserControl>
